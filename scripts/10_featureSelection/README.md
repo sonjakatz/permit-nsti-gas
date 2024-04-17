@@ -1,0 +1,1 @@
+New environment is needed for running [BorutaPy](https://github.com/scikit-learn-contrib/boruta_py), because it requires older numpy version

@@ -1,0 +1,11 @@
+name: env_permit_gas
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.*
+  - numpy
+  - pip
+  - scikit-learn
+  - pandas
+  - matplotlib
+  - seaborn
