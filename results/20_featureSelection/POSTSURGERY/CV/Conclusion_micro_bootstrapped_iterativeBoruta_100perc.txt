@@ -1,0 +1,9 @@
+sample_site_1
+creatinine_preop
+hgb_preop
+UPPER_ARM_ARRIVAL
+ANOGENITAL_ARRIVAL
+SURGERY_BEFORE
+DIABETES
+LOWER_ARM_ARRIVAL
+preadmission_creatinine

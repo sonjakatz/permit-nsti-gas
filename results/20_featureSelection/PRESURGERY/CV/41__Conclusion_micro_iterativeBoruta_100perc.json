@@ -1,0 +1,10 @@
+{
+    "creatinine_preop": 1.0,
+    "AGE": 1.0,
+    "ANOGENITAL_ARRIVAL": 1.0,
+    "SURGERY_BEFORE": 1.0,
+    "UPPER_ARM_ARRIVAL": 0.28,
+    "LOWER_ARM_ARRIVAL": 0.16,
+    "DIABETES": 0.08,
+    "hgb_preop": 0.16
+}

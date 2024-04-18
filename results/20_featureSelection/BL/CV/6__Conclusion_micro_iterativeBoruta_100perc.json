@@ -1,0 +1,20 @@
+{
+    "sys_bp_low_bl": 1.0,
+    "sample_site_1": 0.96,
+    "creatinine_preop": 1.0,
+    "hgb_preop": 1.0,
+    "creatinine_BL": 1.0,
+    "NA_max_BL": 1.0,
+    "platelet_BL": 1.0,
+    "lactate_BL": 0.96,
+    "glucose_BL": 1.0,
+    "ANOGENITAL_ARRIVAL": 1.0,
+    "bilirubin_high_bl": 0.48,
+    "AGE": 0.02,
+    "UPPER_ARM_ARRIVAL": 0.34,
+    "SURGERY_BEFORE": 0.04,
+    "LOWER_ARM_ARRIVAL": 0.52,
+    "pha_BL": 0.22,
+    "preadmission_creatinine": 0.02,
+    "DIABETES": 0.02
+}

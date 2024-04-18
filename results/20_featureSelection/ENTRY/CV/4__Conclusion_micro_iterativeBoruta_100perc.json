@@ -1,0 +1,11 @@
+{
+    "AGE": 0.6,
+    "UPPER_ARM_ARRIVAL": 0.74,
+    "LOWER_ARM_ARRIVAL": 0.94,
+    "ANOGENITAL_ARRIVAL": 1.0,
+    "SURGERY_BEFORE": 1.0,
+    "DIABETES": 1.0,
+    "CENTER_CODE": 0.02,
+    "shock_BL": 0.02,
+    "LOWER_LEG_ARRIVAL": 0.02
+}

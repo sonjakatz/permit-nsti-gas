@@ -1,0 +1,10 @@
+{
+    "sample_site_1": 0.88,
+    "wbc_preop": 0.26,
+    "creatinine_preop": 1.0,
+    "hgb_preop": 1.0,
+    "preadmission_creatinine": 0.6,
+    "AGE": 0.92,
+    "ANOGENITAL_ARRIVAL": 1.0,
+    "SURGERY_BEFORE": 0.2
+}

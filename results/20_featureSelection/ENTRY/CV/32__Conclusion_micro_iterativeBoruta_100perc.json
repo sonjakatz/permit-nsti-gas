@@ -1,0 +1,10 @@
+{
+    "UPPER_ARM_ARRIVAL": 0.52,
+    "ANOGENITAL_ARRIVAL": 1.0,
+    "SURGERY_BEFORE": 1.0,
+    "shock_BL": 0.5,
+    "LOWER_ARM_ARRIVAL": 0.56,
+    "BMI": 0.46,
+    "AGE": 0.38,
+    "DIABETES": 0.12
+}

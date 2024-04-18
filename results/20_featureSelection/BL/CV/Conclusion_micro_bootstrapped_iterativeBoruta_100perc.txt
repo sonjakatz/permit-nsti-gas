@@ -1,0 +1,14 @@
+sys_bp_low_bl
+creatinine_preop
+hgb_preop
+creatinine_BL
+NA_max_BL
+platelet_BL
+lactate_BL
+glucose_BL
+ANOGENITAL_ARRIVAL
+SURGERY_BEFORE
+preadmission_creatinine
+LOWER_ARM_ARRIVAL
+UPPER_ARM_ARRIVAL
+DIABETES

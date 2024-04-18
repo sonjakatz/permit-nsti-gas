@@ -1,0 +1,9 @@
+{
+    "AGE": 1.0,
+    "ANOGENITAL_ARRIVAL": 1.0,
+    "SURGERY_BEFORE": 1.0,
+    "LOWER_ARM_ARRIVAL": 0.1,
+    "UPPER_ARM_ARRIVAL": 0.02,
+    "DIABETES": 0.04,
+    "WEIGHT": 0.04
+}

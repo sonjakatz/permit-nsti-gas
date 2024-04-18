@@ -1,0 +1,10 @@
+{
+    "wbc_preop": 0.98,
+    "creatinine_preop": 1.0,
+    "hgb_preop": 1.0,
+    "UPPER_ARM_ARRIVAL": 0.98,
+    "LOWER_ARM_ARRIVAL": 0.98,
+    "ANOGENITAL_ARRIVAL": 1.0,
+    "DIABETES": 0.4,
+    "SURGERY_BEFORE": 0.2
+}
