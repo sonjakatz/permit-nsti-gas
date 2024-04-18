@@ -59,7 +59,6 @@ def pipe_imputation_scaling(num_columns, bin_columns, cat_columns):
     return preprocessor    
 
 
-
 def sample_w_replacement(data, n_size: int, stratify=None, random_state=None):
     
     rng = np.random.RandomState(seed=random_state)
@@ -97,3 +96,5 @@ def sample_w_replacement(data, n_size: int, stratify=None, random_state=None):
             all_train_idx = np.append(all_train_idx, train_idx_resampled).astype(int)
             all_test_idx = np.append(all_test_idx, test_idx_resambled).astype(int)
         return all_train_idx, all_test_idx
+
+
