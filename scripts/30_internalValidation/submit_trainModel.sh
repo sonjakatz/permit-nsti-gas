@@ -23,7 +23,8 @@ echo $CONDA_DEFAULT_ENV
 HOME="/home/WUR/katz001/PROJECTS/permit-nsti-gas"
 cd $HOME
 DATASET="PRESURGERY"
-N_ITER=200
+N_ITER=1000
 
-python scripts/30_internalValidation/00_trainModels_bootstrapping.py $DATASET $N_ITER
 
+#python scripts/30_internalValidation/00_trainModels_bootstrapping_inclSHAP.py $DATASET $N_ITER
+python scripts/30_internalValidation/10_trainModels_wholeDataset.py $DATASET 

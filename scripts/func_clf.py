@@ -4,6 +4,7 @@ import numpy as np
 from sklearn.model_selection import LeaveOneOut, StratifiedKFold, GridSearchCV
 from sklearn.metrics import auc, roc_curve, average_precision_score, roc_auc_score
 from sklearn.pipeline import Pipeline
+import shap
 
 from func_preprocess import sample_w_replacement
 
@@ -89,14 +90,16 @@ def classify_dcv(X, y, pipe, hp_grid,
     return results
 
 
-def classify_boostrap(X, 
-                      y, 
-                      pipe, 
-                      hp_grid,
-                      perc_samples_per_boostrap=1):
+
+
+def classify_boostrap_inclSHAP(X, 
+                                y, 
+                                pipe, 
+                                hp_grid,
+                                perc_samples_per_boostrap=1):
     
     ''' 
-    Run classifier with bootstrapping
+    Run classifier with bootstrapping and SHAP analysis
     '''
 
 
@@ -129,4 +132,27 @@ def classify_boostrap(X,
     precision_recall = average_precision_score(y_test,y_predProba)
     dic_results = {"auc": auc_val,
 		           "average_prec":precision_recall}  
-    return dic_results
+    
+
+    ''' 
+    SHAP 
+    '''
+    # Use SHAP to explain predictions
+    shap_values_per_bootstrap = dict()
+    explainer = shap.TreeExplainer(gs.best_estimator_["classifier"])
+    X_test_imputed = gs.best_estimator_["imputation"].transform(X_test)
+    shap_values = explainer.shap_values(X_test_imputed)[:,:,1]
+    # Extract SHAP information per fold per sample 
+    for i, idx in enumerate(test_idx):
+        shap_values_per_bootstrap[idx] = shap_values[i] #-#-#
+
+    ''' 
+    Save pred_proba()
+    '''    
+    proba_per_bootstrap = dict()
+    for i, idx in enumerate(X.index[test_idx]):
+        proba_per_bootstrap[idx] = y_predProba[i] #-#-#    
+
+
+
+    return dic_results, shap_values_per_bootstrap, proba_per_bootstrap

@@ -82,7 +82,15 @@ grids = {'rfc':{
 ''' 
 Read data
 '''
-data = pd.read_csv(f"{dataPath}/{dataset}", index_col=0)
+with open(f"{PATH}/data/data_dtypes.json", "r") as f:
+    dtypes = json.load(f)
+data = pd.read_csv(f"{dataPath}/{dataset}", index_col=0, dtype=dtypes)
+tmp = data.select_dtypes(include=["float32"]).columns 
+data[tmp] = data[tmp].astype(pd.Int64Dtype())
+
+''' 
+Split
+'''
 X = data.drop(target, axis=1)
 y = data[target]
 
