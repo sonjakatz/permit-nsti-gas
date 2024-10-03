@@ -1,7 +1,7 @@
 #!/bin/bash
 #-----------------------------Other information------------------------
 #SBATCH --comment=773320000
-#SBATCH --job-name=fullEntry
+#SBATCH --job-name=fine
 #-----------------------------Required resources-----------------------
 #SBATCH --time=2000
 #SBATCH --mem=2048
@@ -23,12 +23,12 @@ echo $CONDA_DEFAULT_ENV
 HOME="/home/WUR/katz001/PROJECTS/permit-nsti-gas"
 cd $HOME
 DATASET="PRESURGERY"
-N_ITER=200
+N_ITER=1000
 
 
-python scripts/30_internalValidation/00_trainModels_bootstrapping_inclSHAP.py $DATASET $N_ITER
+### python scripts/40_externalValidation/20_validateModels_bootstrapping_inclSHAP.py $DATASET $N_ITER
+
+python scripts/40_externalValidation/30_validateModels_finetune.py $DATASET $N_ITER
 
 
 
-#### Train one classifier on whole dataset  (for external validation)
-## python scripts/30_internalValidation/10_trainModels_wholeDataset.py $DATASET 

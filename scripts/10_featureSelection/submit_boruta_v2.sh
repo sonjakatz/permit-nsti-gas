@@ -1,9 +1,9 @@
 #!/bin/bash
 #-----------------------------Other information------------------------
 #SBATCH --comment=773320000
-#SBATCH --job-name=fullEntry
+#SBATCH --job-name=fs
 #-----------------------------Required resources-----------------------
-#SBATCH --time=2000
+#SBATCH --time=1000
 #SBATCH --mem=2048
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
@@ -17,18 +17,11 @@
 
 # ACTIVATE ANACONDAi
 eval "$(conda shell.bash hook)"
-source activate env_permit_gas
+source activate env_borutaPy
 echo $CONDA_DEFAULT_ENV
 
 HOME="/home/WUR/katz001/PROJECTS/permit-nsti-gas"
 cd $HOME
-DATASET="PRESURGERY"
-N_ITER=200
+DATASET="BL"
 
-
-python scripts/30_internalValidation/00_trainModels_bootstrapping_inclSHAP.py $DATASET $N_ITER
-
-
-
-#### Train one classifier on whole dataset  (for external validation)
-## python scripts/30_internalValidation/10_trainModels_wholeDataset.py $DATASET 
+python scripts/10_featureSelection/submit_boruta_bootstrapCV.py $DATASET
